@@ -1,6 +1,8 @@
 <%@ page contentType="text/html" %>
 <html>
-<head><title>Addition Result</title></head>
+<head>
+    <title>Addition Result</title>
+</head>
 <body>
     <h2>Addition Result</h2>
 
