@@ -4,7 +4,7 @@ import jakarta.servlet.http.*;
 
 public class FirstServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-        res.setContentType("text/html");
+        res.setContentType("text/html"); //Optional line
         PrintWriter out = res.getWriter();
         String user = req.getParameter("user");
 

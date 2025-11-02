@@ -1,14 +1,9 @@
-<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
-         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
-         version="5.0">
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="5.0">
 
   <servlet>
     <servlet-name>FirstServlet</servlet-name>
     <servlet-class>FirstServlet</servlet-class>
   </servlet>
-
   <servlet>
     <servlet-name>SecondServlet</servlet-name>
     <servlet-class>SecondServlet</servlet-class>
@@ -18,7 +13,6 @@
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
-
   <servlet-mapping>
     <servlet-name>SecondServlet</servlet-name>
     <url-pattern>/SecondServlet</url-pattern>
