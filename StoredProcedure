@@ -1,0 +1,26 @@
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    salary DECIMAL(10,2)
+);
+
+DELIMITER //
+CREATE PROCEDURE insert_employee(
+    IN p_id INT,
+    IN p_name VARCHAR(50),
+    IN p_salary DECIMAL(10,2)
+)
+BEGIN
+    INSERT INTO employee VALUES (p_id, p_name, p_salary);
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE get_salary_by_id(
+    IN p_id INT,
+    OUT p_salary DECIMAL(10,2)
+)
+BEGIN
+    SELECT salary INTO p_salary FROM employee WHERE emp_id = p_id;
+END //
+DELIMITER ;
