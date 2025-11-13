@@ -11,7 +11,6 @@ public class WelcomeServlet extends HttpServlet {
 
         String user = null;
 
-        // --- Retrieve via Cookie ---
         Cookie[] cookies = req.getCookies();
         if (cookies != null) {
             for (Cookie c : cookies) {
@@ -22,14 +21,12 @@ public class WelcomeServlet extends HttpServlet {
             }
         }
 
-        // --- Retrieve via Session ---
         if (user == null) {
             HttpSession session = req.getSession(false);
             if (session != null)
                 user = (String) session.getAttribute("user");
         }
 
-        // --- Retrieve via URL Rewriting ---
         if (user == null)
             user = req.getParameter("user");
 
